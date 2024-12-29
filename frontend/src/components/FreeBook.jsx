@@ -54,7 +54,7 @@ function FreeBook() {
         </div>
         <div>
           <Slider {...settings}>
-            
+            Satyajit
           </Slider>
         </div>
       </div>
