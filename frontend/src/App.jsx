@@ -7,7 +7,6 @@ const App = () => {
     <>
        <HomePage/>
            {/* <Route path="/" element={<HomePage />} /> */}
-           {/* first commit */}
     
     </>
   )

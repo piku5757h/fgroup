@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navItems = (
     <>
       <li>
@@ -10,18 +25,24 @@ function Navbar() {
         <a>Course</a>
       </li>
       <li>
-        <a>contact</a>
+        <a>Contact</a>
       </li>
 
       <li>
-        <a>Contact</a>
+        <a>About</a>
       </li>
     </>
   );
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0">
-        <div className="navbar bg-base-100">
+      <div
+        className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -48,17 +69,17 @@ function Navbar() {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                {navitem}
+                {navItems}
               </ul>
             </div>
             <a className="text-2xl font-bold cursor-pointer">bookstore</a>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">{navitem}</ul>
+              <ul className="menu menu-horizontal px-1">{navItems}</ul>
             </div>
             <div className="hidden md:block">
-              <label className="input input-bordered px-3 py-2 rounded-md flex items-center gap-2 mx-1">
+              <label className="px-3 py-2 border rounded-md flex items-center gap-2 mx-1">
                 <input
                   type="text"
                   className="grow outline-none"
@@ -88,7 +109,7 @@ function Navbar() {
 
               {/* sun icon */}
               <svg
-                className="swap-off h-8 w-8 fill-current"
+                className="swap-off h-7 w-7 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -97,7 +118,7 @@ function Navbar() {
 
               {/* moon icon */}
               <svg
-                className="swap-on h-8 w-8 fill-current"
+                className="swap-on h-7 w-7 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -106,7 +127,7 @@ function Navbar() {
             </label>
 
             <div className="">
-              <a className="bg-black mx-3 text-white px-3 py-2 rounded-md hover:bg-gray-900 duration-300 ">
+              <a className="bg-black mx-3 text-white px-3 py-2 rounded-md hover:bg-gray-900 duration-300 cursor-pointer">
                 Login
               </a>
             </div>
