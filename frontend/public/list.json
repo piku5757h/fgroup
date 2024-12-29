@@ -73,7 +73,7 @@
 	},
 	{
 		"id": 10,
-		"name": "Sigma Book",
+		"name": "World War II Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -81,7 +81,7 @@
 	},
 	{
 		"id": 11,
-		"name": "Comedy Book",
+		"name": "Sigma Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -89,7 +89,7 @@
 	},
 	{
 		"id": 12,
-		"name": "Sigma Book",
+		"name": "Devote to God Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -97,7 +97,7 @@
 	},
 	{
 		"id": 13,
-		"name": "Comedy Book",
+		"name": "Spiritual Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -105,7 +105,7 @@
 	},
 	{
 		"id": 14,
-		"name": "Sigma Book",
+		"name": "Comic Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -113,7 +113,7 @@
 	},
 	{
 		"id": 15,
-		"name": "Comedy Book",
+		"name": "Memes Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",
@@ -121,7 +121,7 @@
 	},
 	{
 		"id": 16,
-		"name": "Sigma Book",
+		"name": "Skin&care Book",
 		"tatle": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"price": 0,
 		"category": "Free",

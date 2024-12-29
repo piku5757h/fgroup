@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import List from "../../public/list.json";
+import Cards from "../components/Cards";
 
 function FreeBook() {
   const filterData = List.filter((data) => data.category === "Free");
@@ -54,7 +55,9 @@ function FreeBook() {
         </div>
         <div>
           <Slider {...settings}>
-            
+            {filterData.map((item) => (
+              <Cards />
+            ))}
           </Slider>
         </div>
       </div>
